@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Management.Instrumentation;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace _1._1
 {
@@ -11,31 +13,26 @@ namespace _1._1
     {
         public float mass, price;
         protected float coefficient = (float)2.3;
-        public abstract float Getcost();
+        public abstract float Getcost(int max);
     }
 
     public class Pizza : Dish
     {
+        
         public Ingredients[] ingredients = new Ingredients[10];
-
-        override public float Getcost()
+        override public float Getcost(int max)
         {
             float getcost = 0;
 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < max; i++)
             {
-
-                getcost = getcost + ingredients[i].Getcost();
+                getcost += ingredients[i].Getcost();
             }
             return getcost * coefficient;
 
 
         }
-        int max;
-        public void Max(int i)
-        {
-            max = i;
-        }
+        
 
     }
     public class Ingredients
@@ -53,6 +50,8 @@ namespace _1._1
         static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
+            
+           
             try
             {
 
@@ -61,7 +60,7 @@ namespace _1._1
                 Console.WriteLine("Введите количество ингридиентов (до 10 наименований)");
                 int max = Convert.ToInt32(Console.ReadLine());
 
-                pizza1.Max(max);
+                
                 for (int i = 0; i < max; i++)
                 {
                     pizza1.ingredients[i] = new Ingredients();
@@ -79,7 +78,14 @@ namespace _1._1
                     pizza1.ingredients[i].price = Convert.ToInt32(Console.ReadLine());
                 }
 
-                Console.WriteLine("Cost of such pizza = " + pizza1.Getcost() + " grn");
+
+                Console.WriteLine("Стоимость пиццы = " + pizza1.Getcost(max) + " грн");
+               float j = 0;
+                for(int i = 0; i < max; i++)
+                {
+                     j += pizza1.ingredients[i].mass;
+                }
+                Console.WriteLine("Общая масса пиццы составляет " + j + " кг");
                 Console.ReadLine();
 
             }
