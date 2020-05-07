@@ -91,7 +91,7 @@ namespace _1._1
             }
             catch (IndexOutOfRangeException)
             {
-                Console.WriteLine("Я не могу обработать блюдо с больше чем 10 ингридиентов, прости((");
+                Console.WriteLine("Я не могу обработать блюдо с больее чем 10 ингридиентов, прости((");
                 Console.ReadLine();
             }
 
