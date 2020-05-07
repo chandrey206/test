@@ -11,97 +11,69 @@ namespace Pizzeria2
 {
 	public abstract class Dish
 	{
-		public float mass, price;
-		protected float coefficient = (float)2.3;
-		public abstract float Getcost(int max);
+		public float Mass, Price;
+		protected float PriceCoefficient = (float)2.3;
+		public abstract float GetCost(int max);
 	}
-
-
 	public class Pizza : Dish
 	{
-
 		public Ingredients[] ingredients = new Ingredients[10];
-		override public float Getcost(int max)
+		override public float GetCost(int max)
 		{
-			float getcost = 0;
-
+			float GetCost = 0;
 
 			for (int i = 0; i < max; i++)
 			{
-				getcost += ingredients[i].Getcost();
+				GetCost += ingredients[i].Getcost();
 			}
-			return getcost * coefficient;
-
-
-
-
+			return GetCost * PriceCoefficient;
 		}
-
-
-
 	}
 	public class Ingredients
 	{
-		public float mass, price;
-		public string name;
+		public float Mass, Price;
+		public string Name;
 		public virtual float Getcost()
 		{
-			return mass * price;
+			return Mass * Price;
 		}
 	}
-
-
+	
 	class Program
 	{
 		static void Main(string[] args)
 		{
 			Console.OutputEncoding = System.Text.Encoding.UTF8;
-
-
 			try
 			{
-
-
 				Pizza pizza1 = new Pizza();
-
-
 				Console.WriteLine("Введите количество ингридиентов (до 10 наименований)");
+				
 				int max = Convert.ToInt32(Console.ReadLine());
-
-
 
 				for (int i = 0; i < max; i++)
 				{
 					pizza1.ingredients[i] = new Ingredients();
 				}
 
-
-
-
-
-
 				for (int i = 0; i < max; i++)
 				{
 					Console.WriteLine("Введите название " + (i + 1) + " -го ингридиента");
-					pizza1.ingredients[i].name = Console.ReadLine();
+					pizza1.ingredients[i].Name = Console.ReadLine();
 					Console.WriteLine("Введите желаемую массу " + (i + 1) + " -го ингридиента");
-					pizza1.ingredients[i].mass = Convert.ToInt32(Console.ReadLine());
+					pizza1.ingredients[i].Mass = Convert.ToInt32(Console.ReadLine());
 					Console.WriteLine("Введите цену " + (i + 1) + " - го ингридиента");
-					pizza1.ingredients[i].price = Convert.ToInt32(Console.ReadLine());
+					pizza1.ingredients[i].Price = Convert.ToInt32(Console.ReadLine());
 				}
 
-
-
-
-				Console.WriteLine("Стоимость пиццы = " + pizza1.Getcost(max) + " грн");
+				Console.WriteLine("Стоимость пиццы = " + pizza1.GetCost(max) + " грн");
 				float j = 0;
 				for (int i = 0; i < max; i++)
 				{
-					j += pizza1.ingredients[i].mass;
+					j += pizza1.ingredients[i].Mass;
 				}
 				Console.WriteLine("Общая масса пиццы составляет " + j + " кг");
 				Console.ReadLine();
-
 
 			}
 			catch (IndexOutOfRangeException)
@@ -109,10 +81,6 @@ namespace Pizzeria2
 				Console.WriteLine("Я не могу обработать блюдо с больее чем 10 ингридиентов, прости((");
 				Console.ReadLine();
 			}
-
-
-
-
 		}
 	}
 }
