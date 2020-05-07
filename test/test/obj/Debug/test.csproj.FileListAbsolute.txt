@@ -1,7 +1,0 @@
-E:\Андрей\Программирование\test\test\test\bin\Debug\test.exe.config
-E:\Андрей\Программирование\test\test\test\bin\Debug\test.exe
-E:\Андрей\Программирование\test\test\test\bin\Debug\test.pdb
-E:\Андрей\Программирование\test\test\test\obj\Debug\test.csprojAssemblyReference.cache
-E:\Андрей\Программирование\test\test\test\obj\Debug\test.csproj.CoreCompileInputs.cache
-E:\Андрей\Программирование\test\test\test\obj\Debug\test.exe
-E:\Андрей\Программирование\test\test\test\obj\Debug\test.pdb
