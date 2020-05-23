@@ -1,0 +1,7 @@
+E:\Андрей\Программирование\test\Pizzeria 1.1\Pizzeria 1.1\bin\Debug\Pizzeria 1.1.exe.config
+E:\Андрей\Программирование\test\Pizzeria 1.1\Pizzeria 1.1\bin\Debug\Pizzeria 1.1.exe
+E:\Андрей\Программирование\test\Pizzeria 1.1\Pizzeria 1.1\bin\Debug\Pizzeria 1.1.pdb
+E:\Андрей\Программирование\test\Pizzeria 1.1\Pizzeria 1.1\obj\Debug\Pizzeria 1.1.csprojAssemblyReference.cache
+E:\Андрей\Программирование\test\Pizzeria 1.1\Pizzeria 1.1\obj\Debug\Pizzeria 1.1.csproj.CoreCompileInputs.cache
+E:\Андрей\Программирование\test\Pizzeria 1.1\Pizzeria 1.1\obj\Debug\Pizzeria 1.1.exe
+E:\Андрей\Программирование\test\Pizzeria 1.1\Pizzeria 1.1\obj\Debug\Pizzeria 1.1.pdb

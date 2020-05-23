@@ -11,17 +11,17 @@ namespace Pizzeria1
 {
     public abstract class Dish
     {
-        public float Mass, Price;
-        protected float PriceCoefficient = (float)2.3;
-        public abstract float GetCost();
+        public decimal Mass, Price;
+        protected decimal PriceCoefficient = (decimal)2.3;
+        public abstract decimal GetCost();
     }
 
     public class Pizza : Dish
     {
         public Ingredient[] Ingredients = new Ingredient[3];
-        override public float GetCost()
+        override public decimal GetCost()
         {
-            float sum = 0;
+            decimal sum = 0;
             for (int i = 0; i < Ingredients.Length; i++)
             {
                 sum += Ingredients[i].GetCost();
@@ -29,30 +29,30 @@ namespace Pizzeria1
             return sum;
         }
     }
-
+    
     public abstract class Ingredient
     {
         public string Name;
-        public float Mass, Price;
-        public abstract float GetCost();
+        public decimal Mass, Price;
+        public abstract decimal GetCost();
     }
     public class Cake : Ingredient
     {
-        public override float GetCost()
+        public override decimal GetCost()
         {
             return Mass * Price;
         }
     }
     public class Meat : Ingredient
     {
-        public override float GetCost()
+        public override decimal GetCost()
         {
             return Mass * Price;
         }
     }
     public class Tomato : Ingredient
     {
-        public override float GetCost()
+        public override decimal GetCost()
         {
             return Mass * Price;
         }
