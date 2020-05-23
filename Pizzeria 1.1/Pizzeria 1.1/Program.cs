@@ -18,11 +18,9 @@ namespace Pizzeria2
     }
     public class Pizza : Dish
     {
-
         public Ingredients[] ingredients = new Ingredients[10];
         override public float GetCost(int max)
         {
-
             float GetCost = 0;
             throw new InvalidOperationException();
 
@@ -43,14 +41,12 @@ namespace Pizzeria2
             return Mass * Price;
         }
     }
-
     class Program
     {
         static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             {
-
                 Pizza pizza = new Pizza();
                 Console.WriteLine("Введите количество ингридиентов (до 10 наименований)");
 
