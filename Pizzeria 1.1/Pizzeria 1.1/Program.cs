@@ -22,11 +22,10 @@ namespace Pizzeria2
         override public float GetCost(int max)
         {
             float GetCost = 0;
-            if (max==0) throw new InvalidOperationException();
+            if (max == 0) throw new InvalidOperationException();
 
             for (int i = 0; i < max; i++)
             {
-
                 GetCost += ingredients[i].Getcost();
             }
             return GetCost * PriceCoefficient;
@@ -59,7 +58,6 @@ namespace Pizzeria2
 
                 for (int i = 0; i < max; i++)
                 {
-
                     Console.WriteLine("Введите название " + (i + 1) + " -го ингридиента");
                     pizza.ingredients[i].Name = Console.ReadLine();
                     Console.WriteLine("Введите желаемую массу " + (i + 1) + " -го ингридиента");
@@ -81,7 +79,6 @@ namespace Pizzeria2
                 {
                     Console.WriteLine("Введите не ноль");
                 }
-
                 Console.ReadLine();
             }
         }
