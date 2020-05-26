@@ -1,0 +1,7 @@
+E:\Андрей\Программирование\test\Multiplication table tutorial\Multiplication table tutorial\bin\Debug\Multiplication table tutorial.exe.config
+E:\Андрей\Программирование\test\Multiplication table tutorial\Multiplication table tutorial\bin\Debug\Multiplication table tutorial.exe
+E:\Андрей\Программирование\test\Multiplication table tutorial\Multiplication table tutorial\bin\Debug\Multiplication table tutorial.pdb
+E:\Андрей\Программирование\test\Multiplication table tutorial\Multiplication table tutorial\obj\Debug\Multiplication table tutorial.csprojAssemblyReference.cache
+E:\Андрей\Программирование\test\Multiplication table tutorial\Multiplication table tutorial\obj\Debug\Multiplication table tutorial.csproj.CoreCompileInputs.cache
+E:\Андрей\Программирование\test\Multiplication table tutorial\Multiplication table tutorial\obj\Debug\Multiplication table tutorial.exe
+E:\Андрей\Программирование\test\Multiplication table tutorial\Multiplication table tutorial\obj\Debug\Multiplication table tutorial.pdb
