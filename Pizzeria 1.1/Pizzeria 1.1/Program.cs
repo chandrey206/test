@@ -22,7 +22,7 @@ namespace Pizzeria2
         override public float GetCost(int max)
         {
             float GetCost = 0;
-            throw new InvalidOperationException();
+            if (max==0) throw new InvalidOperationException();
 
             for (int i = 0; i < max; i++)
             {

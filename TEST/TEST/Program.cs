@@ -1,30 +1,16 @@
 ﻿using System;
+using System.Globalization;
 
-delegate void MyEventHandler();
-
-class MyEvent
+namespace TEST
 {
-    public event MyEventHandler SomeEvent;
-
-    public void OnSomeEvent()
+    delegate int Inter(int i);
+    class demo
     {
-        if (SomeEvent != null)
-            SomeEvent();
-    }
-}
-class EventDemo
-{
-    // Обработчик события.
-    static void Handler()
-    {
-        Console.WriteLine("Произошло событие");
-    }
-    static void Main()
-    {
-        Console.OutputEncoding = System.Text.Encoding.UTF8;
-        MyEvent evt = new MyEvent();
-        evt.SomeEvent += Handler;
-        evt.OnSomeEvent();
-        Console.ReadKey();
+        static Inter a = delegate (int g) { return g * g; };
+        static void Main()
+        {
+            Console.WriteLine(a(Convert.ToInt32(Console.ReadLine())));
+            Console.ReadLine();
+        }
     }
 }
